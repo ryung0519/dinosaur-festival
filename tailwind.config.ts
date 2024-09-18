@@ -9,8 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "var(--background)", // 배경색을 CSS 변수로 확장
+        foreground: "var(--foreground)", // 글자 색을 CSS 변수로 확장
+        'font-color': "var(--font-color)",  // 폰트 색상 추가
       },
     },
   },

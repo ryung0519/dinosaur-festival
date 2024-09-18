@@ -4,7 +4,7 @@ export default function Introduction() {
   return (
     <>
       <Navbar />
-      <div className="max-w-7xl mx-auto pt-24">
+      <div className="max-w-7xl mx-auto pt-24 text-font-color">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">공룡축제 소개</h1>
         <section id="축제개요" className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-900 mb-4">축제개요</h2>

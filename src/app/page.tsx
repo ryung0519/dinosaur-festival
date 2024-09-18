@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto pt-32">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">공룡 축제에 오신 것을 환영합니다!</h1>
         <p className="text-xl text-gray-700 mb-8">
           공룡 축제는 역사와 과학, 그리고 재미가 어우러진 특별한 행사입니다. 
