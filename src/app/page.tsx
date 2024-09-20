@@ -1,6 +1,8 @@
 'use client'
 
 import Navbar from '@/app/components/topBar'
+import Navbar1 from '@/app/components/topBar1'
+import Footer from '@/app/components/footer'
 import React from 'react'
 import ImageSlider from './components/ui/imageSlider'
 import { Button } from "./components/ui/button"
@@ -9,6 +11,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 export default function Home() {
+
   const images = [
     '/image1.jpg?height=400&width=800',
     '/dino2.jpg?height=400&width=800',
@@ -18,6 +21,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      <Navbar1 />
       <div className="flex flex-col min-h-screen">
       <header className="bg-primary text-primary-foreground py-20">
         <ImageSlider images={images} />
@@ -98,20 +102,7 @@ export default function Home() {
           </Card>
         </section>
       </main>
-
-      <footer className="bg-muted py-6 mt-12">
-        <div className="container mx-auto px-4 text-center">
-          <p>© 2024 공룡축제. All rights reserved.</p>
-          <p className="mt-2">
-            문의: info@dinosaurfestival.com | 전화: 123-456-7890
-          </p>
-          <div className="mt-4 space-x-4">
-            <Link href="#" className="text-primary hover:underline">Facebook</Link>
-            <Link href="#" className="text-primary hover:underline">Instagram</Link>
-            <Link href="#" className="text-primary hover:underline">Twitter</Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
     </>
   )

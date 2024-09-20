@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 
@@ -39,20 +39,37 @@ const menuItems = [
   {
     title: '티켓구매',
     href: '/buy',
-    subItems: [], // 하위 메뉴가 없는 경우
+    subItems: [],
   },
 ]
 
-export default function Navbar() {
+export default function Navbar1() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setIsVisible(true)
+      } else {
+        setIsVisible(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  if (!isVisible) return null;
 
   return (
-    <nav 
-      className="bg-black bg-opacity-70 text-white fixed left-0 right-0 z-50 mx-auto"
-      style={{ maxWidth: '1700px', backdropFilter: 'blur(5px)', marginTop: '15px' }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-black text-white fixed top-0 left-0 right-0 z-50">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24">
           <div className="flex-shrink-0 flex items-center">
+            
             <Link href="/" className="text-2xl font-bold">
               공룡 축제
             </Link>

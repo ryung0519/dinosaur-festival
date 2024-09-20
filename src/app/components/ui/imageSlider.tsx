@@ -3,9 +3,10 @@ import Image from 'next/image'
 
 interface ImageSliderProps {
   images: string[]
+  children?: React.ReactNode
 }
 
-export default function ImageSlider({ images }: ImageSliderProps) {
+export default function ImageSlider({ images, children }: ImageSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
@@ -17,7 +18,7 @@ export default function ImageSlider({ images }: ImageSliderProps) {
   }, [images.length])
 
   return (
-    <div className="relative w-full h-[400px]">
+    <div className="relative w-full h-[600px]">
       {images.map((src, index) => (
         <Image
           key={src}
@@ -30,6 +31,10 @@ export default function ImageSlider({ images }: ImageSliderProps) {
           }`}
         />
       ))}
+      <div className="absolute inset-0 bg-black opacity-40" />
+      <div className="absolute inset-0 flex justify-center items-center">
+        {children}
+      </div>
     </div>
   )
 }
