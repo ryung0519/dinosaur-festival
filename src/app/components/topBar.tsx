@@ -10,11 +10,11 @@ const menuItems = [
     href: '/intro/introduction',
     subItems: [
       { title: '축제개요', href: '/intro/introduction' },  
-      { title: '운영시간', href: '/intro/introduction' }, 
-      { title: '오시는 길', href: '/intro/introduction' }, 
-      { title: '교통안내', href: '/intro/introduction' },
-      { title: '식당안내', href: '/intro/introduction' },
-      { title: '주변관광지 안내', href: '/intro/introduction' }
+      { title: '운영시간', href: '/intro/time' }, 
+      { title: '오시는 길', href: '/intro/way' }, 
+      { title: '식당안내', href: '/intro/restaurant' },
+      { title: '주변관광지 안내', href: '/intro/tourist' },
+      { title: '주최사 소개', href: '/intro/company' }
     ],
   },
   {
@@ -38,7 +38,7 @@ const menuItems = [
   },
   {
     title: '티켓구매',
-    href: '/tickets',
+    href: '/buy',
     subItems: [], // 하위 메뉴가 없는 경우
   },
 ]

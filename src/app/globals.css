@@ -5,14 +5,14 @@
 :root {
   --background: #ffffff;
   --foreground: #ffffff;
-  --font-color: #41ff11; /* 텍스트 색상 변수 정의 */
+  --font-color: #000000; /* 텍스트 색상 변수 정의 */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #ffffff;
-    --foreground: #ededed;
-    --font-color: #41ff11; /* 어두운 모드에서도 유지될 폰트 색상 */
+    --background: #000000;
+    --foreground: #000000;
+    --font-color: #ffffff; /* 어두운 모드에서도 유지될 폰트 색상 */
   }
 }
 

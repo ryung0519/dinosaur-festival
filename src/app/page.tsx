@@ -1,21 +1,26 @@
 'use client'
 
 import Navbar from '@/app/components/topBar'
+import React from 'react'
+import ImageSlider from './components/ui/imageSlider'
 import { Button } from "./components/ui/button"
 import { Card, CardContent } from "./components/ui/card"
 import Image from "next/image"
 import Link from "next/link"
 
 export default function Home() {
+  const images = [
+    '/image1.jpg?height=400&width=800',
+    '/dino2.jpg?height=400&width=800',
+    '/dino3.jpg?height=400&width=800',
+  ]
+
   return (
     <>
       <Navbar />
       <div className="flex flex-col min-h-screen">
-      <header className="bg-primary text-primary-foreground py-6">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center">공룡축제 2023</h1>
-          <p className="text-xl text-center mt-2">과거로의 시간여행, 공룡과의 만남</p>
-        </div>
+      <header className="bg-primary text-primary-foreground py-20">
+        <ImageSlider images={images} />
       </header>
 
       <main className="flex-grow container mx-auto px-4 py-8">
@@ -31,11 +36,12 @@ export default function Home() {
                 </div>
                 <div className="relative h-48 md:h-full">
                   <Image
-                    src="/placeholder.svg?height=200&width=400"
+                    src="/dino1.jpg"
                     alt="공룡축제 전경"
                     layout="fill"
                     objectFit="cover"
                     className="rounded-lg"
+
                   />
                 </div>
               </div>
@@ -86,7 +92,7 @@ export default function Home() {
             <CardContent className="p-6">
               <p className="mb-4">성인: 15,000원 / 청소년: 12,000원 / 어린이: 8,000원</p>
               <Button asChild>
-                <Link href="#">지금 티켓 구매하기</Link>
+                <Link href="/buy">지금 티켓 구매하기</Link>
               </Button>
             </CardContent>
           </Card>
