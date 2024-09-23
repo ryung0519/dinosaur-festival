@@ -1,14 +1,12 @@
 'use client'
-
+import React from 'react'
+import Image from "next/image"
+import Link from "next/link"
+import { Button } from "./components/ui/button"
+import { Card, CardContent } from "./components/ui/card"
 import Navbar from '@/app/components/topBar'
 import Navbar1 from '@/app/components/topBar1'
 import Footer from '@/app/components/footer'
-import React from 'react'
-import ImageSlider from './components/ui/imageSlider'
-import { Button } from "./components/ui/button"
-import { Card, CardContent } from "./components/ui/card"
-import Image from "next/image"
-import Link from "next/link"
 
 export default function Home() {
 
@@ -20,13 +18,9 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
+      <Navbar images={images} /> 
       <Navbar1 />
       <div className="flex flex-col min-h-screen">
-      <header className="bg-primary text-primary-foreground py-20">
-        <ImageSlider images={images} />
-      </header>
-
       <main className="flex-grow container mx-auto px-4 py-8">
         <section className="mb-12">
           <h2 className="text-3xl font-semibold mb-4">축제 정보</h2>
@@ -61,7 +55,7 @@ export default function Home() {
                 <CardContent className="p-4">
                   <div className="relative h-48 mb-4">
                     <Image
-                      src="/placeholder.svg?height=200&width=300"
+                      src="/image1.jpg"
                       alt={dino}
                       layout="fill"
                       objectFit="cover"

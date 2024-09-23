@@ -18,20 +18,23 @@ export default function ImageSlider({ images, children }: ImageSliderProps) {
   }, [images.length])
 
   return (
-    <div className="relative w-full h-[600px]">
+    <div className="relative w-full h-screen"> {/* Full screen height */}
       {images.map((src, index) => (
-        <Image
+        <div
           key={src}
-          src={src}
-          alt={`Slide ${index + 1}`}
-          layout="fill"
-          objectFit="cover"
-          className={`absolute top-0 left-0 transition-opacity duration-1000 ${
+          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ${
             index === currentIndex ? 'opacity-100' : 'opacity-0'
           }`}
-        />
+        >
+          <Image
+            src={src}
+            alt={`Slide ${index + 1}`}
+            layout="fill"
+            objectFit="cover" // Cover the entire viewport
+          />
+        </div>
       ))}
-      <div className="absolute inset-0 bg-black opacity-40" />
+      <div className="absolute inset-0 bg-black opacity-40" /> {/* Optional overlay */}
       <div className="absolute inset-0 flex justify-center items-center">
         {children}
       </div>

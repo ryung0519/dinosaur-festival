@@ -65,14 +65,12 @@ export default function Navbar1() {
   if (!isVisible) return null;
 
   return (
-    <nav className="bg-black text-white fixed top-0 left-0 right-0 z-50">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24">
+   <nav className="bg-black text-white fixed top-0 left-0 right-0 z-50 h-16">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 h-16"> {/* Height 조정 */}
+          <div className="flex items-center justify-between h-16 mx-auto"> {/* Height 조정 */}
+
           <div className="flex-shrink-0 flex items-center">
-            
-            <Link href="/" className="text-2xl font-bold">
-              공룡 축제
-            </Link>
+    
           </div>
           <div className="hidden sm:flex sm:items-center sm:justify-end sm:flex-grow">
             {menuItems.map((item, index) => (

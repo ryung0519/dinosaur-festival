@@ -1,9 +1,16 @@
 import Navbar from '@/app/components/topBar'
+import Navbar1 from '@/app/components/topBar1'
+
+const images = [
+  '/image1.jpg?height=400&width=800',
+]
+
 
 export default function Introduction() {
   return (
     <>
-      <Navbar />
+       <Navbar images={images} />     
+       <Navbar1 />
       <div className="max-w-7xl mx-auto pt-24">
         <h1 className="text-4xl font-bold   mb-8">오시는 길</h1>
         <section id="축제개요" className="mb-8">

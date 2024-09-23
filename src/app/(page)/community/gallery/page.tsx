@@ -1,15 +1,21 @@
 'use client'
 
 import Navbar from '@/app/components/topBar'
+import Navbar1 from '@/app/components/topBar1'
 import { Button } from "../../../components/ui/button"
 import { Card, CardContent } from "../../../components/ui/card"
 import Image from "next/image"
 import Link from "next/link"
 
+const images = [
+  '/image1.jpg?height=400&width=800',
+]
+
 export default function gallery() {
   return (
     <>
-      <Navbar />
+      <Navbar images={images} /> 
+      <Navbar1 />
       <div className="flex flex-col min-h-screen">
       <header className="bg-primary text-primary-foreground py-36">
         <div className="container mx-auto px-4">
@@ -52,7 +58,7 @@ export default function gallery() {
                 <CardContent className="p-4">
                   <div className="relative h-48 mb-4">
                     <Image
-                      src="/placeholder.svg?height=200&width=300"
+                      src="/image1.jpg"
                       alt={dino}
                       layout="fill"
                       objectFit="cover"

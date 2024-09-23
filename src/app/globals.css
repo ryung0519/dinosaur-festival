@@ -10,9 +10,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #000000;
-    --foreground: #000000;
-    --font-color: #ffffff; /* 어두운 모드에서도 유지될 폰트 색상 */
+    --background: #ffffff;
+    --foreground: #ffffff;
+    --font-color: #000000; /* 어두운 모드에서도 유지될 폰트 색상 */
   }
 }
 
