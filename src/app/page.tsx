@@ -20,7 +20,7 @@ export default function Home() {
     <>
       <Navbar images={images} /> 
       <Navbar1 />
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen" style={{ paddingTop: '450px' }}>
       <main className="flex-grow container mx-auto px-4 py-8">
         <section className="mb-12">
           <h2 className="text-3xl font-semibold mb-4">축제 정보</h2>
