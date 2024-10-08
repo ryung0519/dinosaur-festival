@@ -3,10 +3,11 @@ import Image from 'next/image'
 
 interface ImageSliderProps {
   images: string[]
+  texts: string[];
   children?: React.ReactNode
 }
 
-export default function ImageSlider({ images, children }: ImageSliderProps) {
+export default function ImageSlider({ images, texts }: ImageSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
@@ -35,8 +36,8 @@ export default function ImageSlider({ images, children }: ImageSliderProps) {
         </div>
       ))}
       <div className="absolute inset-0 bg-black opacity-40" /> {/* Optional overlay */}
-      <div className="absolute inset-0 flex justify-center items-center">
-        {children}
+            <div className="absolute inset-0 flex justify-center items-center">
+        <h2 className="text-6xl font-semibold text-white">{texts[currentIndex]}</h2>
       </div>
     </div>
   )

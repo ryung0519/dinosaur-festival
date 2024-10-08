@@ -1,56 +1,80 @@
 import Navbar from '@/app/components/topBar'
 import Navbar1 from '@/app/components/topBar1'
+import Link from 'next/link'
+import { Button } from '@/app/components/ui/button'
 
 const images = [
   '/image1.jpg?height=400&width=800',
 
 ]
-
+const texts = [
+  '티켓구매 페이지',
+]
 
 export default function Introduction() {
-  return (
+return (
     <>
-      <Navbar images={images} /> 
+      <Navbar images={images} title="축제 정보" texts={texts} /> 
       <Navbar1 />
-      <div className="max-w-7xl mx-auto pt-24">
-        <h1 className="text-4xl font-bold  mb-8">티켓구매 페이지</h1>
-        <section id="축제개요" className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">축제개요</h2>
-          <p className="mb-4">
-            공룡축제는 매년 열리는 세계적인 규모의 축제입니다. 최신 고생물학 연구 결과를 바탕으로 한 전시와 체험 프로그램,
-            그리고 세계적인 전문가들의 강연 등 다양한 콘텐츠를 제공합니다.
-          </p>
+      <div className="max-w-7xl mx-auto pt-24 px-32">
+        {/* 관람료 표 */}
+        <section id="관람료" className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">관람료</h2>
+          <table className="table-auto w-full border-collapse border border-gray-300">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border border-gray-300 p-4">구분</th>
+                <th className="border border-gray-300 p-2">개인</th>
+                <th className="border border-gray-300 p-2">단체(20인 이상)</th>
+                <th className="border border-gray-300 p-2">비고</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-gray-300 p-3">어른</td>
+                <td className="border border-gray-300 p-2">₩9,000</td>
+                <td className="border border-gray-300 p-2">₩8,000</td>
+                <td className="border border-gray-300 p-2">20 ~ 64세</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-3">군경</td>
+                <td className="border border-gray-300 p-2">₩7,000</td>
+                <td className="border border-gray-300 p-2">₩7,000</td>
+                <td className="border border-gray-300 p-2">하사이하 군인</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-3">장애인</td>
+                <td className="border border-gray-300 p-2">₩7,000</td>
+                <td className="border border-gray-300 p-2">₩7,000</td>
+                <td className="border border-gray-300 p-2">경비교도</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-3">65세 이상</td>
+                <td className="border border-gray-300 p-2">₩7,000</td>
+                <td className="border border-gray-300 p-2">₩7,000</td>
+                <td className="border border-gray-300 p-2">경로 우대</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-3">초, 중, 고</td>
+                <td className="border border-gray-300 p-2">₩6,000</td>
+                <td className="border border-gray-300 p-2">₩5,000</td>
+                <td className="border border-gray-300 p-2"></td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-3">24개월 이상</td>
+                <td className="border border-gray-300 p-2">₩4,000</td>
+                <td className="border border-gray-300 p-2">₩3,000</td>
+                <td className="border border-gray-300 p-2"></td>
+              </tr>
+            </tbody>
+          </table>
         </section>
-        <section id="운영시간" className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">운영시간</h2>
-          <p className="mb-4">
-            축제는 매일 오전 9시부터 오후 6시까지 운영됩니다. 주말과 공휴일에는 오후 8시까지 연장 운영됩니다.
-          </p>
-        </section>
-        <section id="오시는-길" className="mb-8">
-          <h2 className="text-2xl font-semibold  mb-4">오시는 길</h2>
-          <p className=" mb-4">
-            축제장은 서울시 강남구 테헤란로 123에 위치해 있습니다. 지하철 2호선 강남역에서 도보로 10분 거리에 있습니다.
-          </p>
-        </section>
-        <section id="교통안내" className="mb-8">
-          <h2 className="text-2xl font-semibold  mb-4">교통안내</h2>
-          <p className=" mb-4">
-            지하철, 버스, 자가용 등 다양한 교통수단으로 접근이 가능합니다. 주차 공간이 제한되어 있으므로 가능한 대중교통을 이용해 주시기 바랍니다.
-          </p>
-        </section>
-        <section id="식당안내" className="mb-8">
-          <h2 className="text-2xl font-semibold  mb-4">식당안내</h2>
-          <p className="  mb-4">
-            축제장 내에는 다양한 종류의 식당과 카페가 있습니다. 공룡 테마의 특별 메뉴도 준비되어 있으니 꼭 체험해 보세요.
-          </p>
-        </section>
-        <section id="주변관광지-안내" className="mb-8">
-          <h2 className="text-2xl font-semibold   mb-4">주변관광지 안내</h2>
-          <p className="  mb-4">                
-            축제장 주변에는 다양한 관광지가 있습니다. 축제 방문과 함께 서울의 다른 명소들도 둘러보시는 것을 추천드립니다.
-          </p>
-        </section>
+                {/* 티켓 구매하기 버튼 */}
+        <div className="flex justify-center mb-8">
+          <Button asChild>
+            <Link href="/buy">지금 티켓 구매하기</Link>
+          </Button>
+        </div>
       </div>
     </>
   )

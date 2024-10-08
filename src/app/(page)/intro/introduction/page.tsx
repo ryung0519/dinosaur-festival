@@ -4,14 +4,16 @@ import Navbar1 from '@/app/components/topBar1'
 const images = [
   '/image1.jpg?height=400&width=800',
 ]
-
+const texts = [
+  '축제 정보',
+]
 
 export default function Introduction() {
   return (
     <>
-       <Navbar images={images} />     
-       <Navbar1 />
-      <div className="max-w-7xl mx-auto pt-24">
+      <Navbar images={images} title="축제 정보" texts={texts} /> 
+      <Navbar1 />
+      <div className="max-w-7xl mx-auto pt-24 px-32">
         <h1 className="text-4xl font-bold  mb-8">운영시간</h1>
         <section id="운영시간" className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">축제개요</h2>
@@ -40,7 +42,7 @@ export default function Introduction() {
         <section id="식당안내" className="mb-8">
           <h2 className="text-2xl font-semibold  mb-4">식당안내</h2>
           <p className=" mb-4">
-            축제장 내에는 다양한 종류의 식당과 카페가 있습니다. 공룡 테마의 특별 메뉴도 준비되어 있으니 꼭 체험해 보세요.
+            축제장 내에는 다양한 종류의 식당과 카페가 있습니다. 빛 테마의 특별 메뉴도 준비되어 있으니 꼭 체험해 보세요.
           </p>
         </section>
         <section id="주변관광지-안내" className="mb-8">

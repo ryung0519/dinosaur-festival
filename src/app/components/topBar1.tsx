@@ -6,7 +6,7 @@ import { Menu, X } from 'lucide-react'
 
 const menuItems = [
   {
-    title: '공룡축제 소개',
+    title: '빛축제 소개',
     href: '/intro/introduction',
     subItems: [
       { title: '축제개요', href: '/intro/introduction' },  

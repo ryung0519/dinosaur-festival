@@ -12,13 +12,18 @@ export default function Home() {
 
   const images = [
     '/image1.jpg?height=400&width=800',
-    '/dino2.jpg?height=400&width=800',
-    '/dino3.jpg?height=400&width=800',
+    '/light2.jpg?height=400&width=800',
+    '/light3.jpg?height=400&width=800',
+  ]
+  const texts = [
+    '첫 번째 이미지 설명',
+    '두 번째 이미지 설명',
+    '세 번째 이미지 설명',
   ]
 
   return (
     <>
-      <Navbar images={images} /> 
+      <Navbar images={images} title="축제 정보" texts={texts} /> 
       <Navbar1 />
       <div className="flex flex-col min-h-screen" style={{ paddingTop: '450px' }}>
       <main className="flex-grow container mx-auto px-4 py-8">
@@ -29,13 +34,13 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <p><strong>날짜:</strong> 2023년 8월 1일 - 8월 15일</p>
-                  <p><strong>장소:</strong> 공룡국립공원</p>
-                  <p><strong>주요 이벤트:</strong> 공룡 전시, 화석 발굴 체험, 3D 공룡 영화 상영</p>
+                  <p><strong>장소:</strong> 빛국립공원</p>
+                  <p><strong>주요 이벤트:</strong> 빛 전시, 화석 발굴 체험, 3D 빛 영화 상영</p>
                 </div>
                 <div className="relative h-48 md:h-full">
                   <Image
-                    src="/dino1.jpg"
-                    alt="공룡축제 전경"
+                    src="/light1.jpg"
+                    alt="빛축제 전경"
                     layout="fill"
                     objectFit="cover"
                     className="rounded-lg"
@@ -48,22 +53,22 @@ export default function Home() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-semibold mb-4">공룡 전시</h2>
+          <h2 className="text-3xl font-semibold mb-4">빛 전시</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {['티라노사우루스', '트리케라톱스', '스테고사우루스'].map((dino) => (
-              <Card key={dino}>
+            {['티라노사우루스', '트리케라톱스', '스테고사우루스'].map((light) => (
+              <Card key={light}>
                 <CardContent className="p-4">
                   <div className="relative h-48 mb-4">
                     <Image
                       src="/image1.jpg"
-                      alt={dino}
+                      alt={light}
                       layout="fill"
                       objectFit="cover"
                       className="rounded-lg"
                     />
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{dino}</h3>
-                  <p className="text-muted-foreground">실제 크기의 {dino} 모형을 만나보세요!</p>
+                  <h3 className="text-xl font-semibold mb-2">{light}</h3>
+                  <p className="text-muted-foreground">실제 크기의 {light} 모형을 만나보세요!</p>
                 </CardContent>
               </Card>
             ))}
@@ -76,9 +81,9 @@ export default function Home() {
             <CardContent className="p-6">
               <ul className="list-disc pl-6 space-y-2">
                 <li>화석 발굴 체험: 직접 고생물학자가 되어보세요!</li>
-                <li>공룡 퍼즐 맞추기: 대형 공룡 퍼즐로 두뇌를 자극해보세요.</li>
-                <li>공룡 페이스 페인팅: 좋아하는 공룡으로 변신해보세요!</li>
-                <li>3D 공룡 영화 상영: 생생한 공룡의 세계를 경험해보세요.</li>
+                <li>빛 퍼즐 맞추기: 대형 빛 퍼즐로 두뇌를 자극해보세요.</li>
+                <li>빛 페이스 페인팅: 좋아하는 빛으로 변신해보세요!</li>
+                <li>3D 빛 영화 상영: 생생한 빛의 세계를 경험해보세요.</li>
               </ul>
             </CardContent>
           </Card>
